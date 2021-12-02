@@ -34,7 +34,7 @@
       }
 
       const ctx = document.getElementById("myChart").getContext("2d");
-
+/*
       let chart = new Chart(ctx, {
         type: "line",
         data: {
@@ -72,7 +72,7 @@
           },
         },
       });
-
+*/
       async function onStartButtonClick() {
         try {
           const port = await navigator.serial.requestPort();
@@ -93,7 +93,7 @@
                   break;
                 }
                 console.log(value);
-
+                /*
                 if(value.slice(0,1)==="X") {
                   chart.data.datasets[0].data.push({
                     x: Date.now(),
@@ -109,7 +109,7 @@
                     x: Date.now(),
                     y: value.slice(2),
                   });
-                }
+                }*/
                 chart.update({
                   preservation: true,
                 });
